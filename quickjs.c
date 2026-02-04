@@ -3028,6 +3028,14 @@ static size_t count_ascii(const uint8_t *buf, size_t len)
     return p - buf;
 }
 
+// ProCern additions to make C++ interaction nicer.
+JSValue JS_NewUndefined() {
+    return JS_UNDEFINED;
+}
+JSValue JS_NewNull() {
+    return JS_NULL;
+}
+
 /* str is UTF-8 encoded */
 JSAtom JS_NewAtomLen(JSContext *ctx, const char *str, size_t len)
 {

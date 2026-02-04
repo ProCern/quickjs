@@ -444,6 +444,10 @@ typedef struct JSMemoryUsage {
 void JS_ComputeMemoryUsage(JSRuntime *rt, JSMemoryUsage *s);
 void JS_DumpMemoryUsage(FILE *fp, const JSMemoryUsage *s, JSRuntime *rt);
 
+// ProCern additions to make C++ interaction nicer.
+JSValue JS_NewUndefined();
+JSValue JS_NewNull();
+
 /* atom support */
 #define JS_ATOM_NULL 0
 
